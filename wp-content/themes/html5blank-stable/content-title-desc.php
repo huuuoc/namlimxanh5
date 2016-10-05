@@ -10,7 +10,7 @@
  */
 ?>
 
-<li id="post-<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>">
 	<div class="info-product">
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
@@ -20,30 +20,12 @@
 		<?php endif; ?>
 		<!-- /post thumbnail -->
 		
-		<div class="content-product">
+		<div class="desc-article">
 			<?php
 				the_title( '<h2 class="name-product"><a title="'.get_the_title().'" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			?>
-			<div class="type-product">
-				<?php
-					$typeProduct = get_post_meta( get_the_ID(), 'type_product', true );
-					 
-					if( $typeProduct ) { // kiểm tra xem nó có dữ liệu hay không
-						echo $typeProduct;
-					}
-				?>
-			</div>
-			<div class="price-product">
-				<?php
-					$priceProduct = get_post_meta( get_the_ID(), 'price_product', true );
-					 
-					if( $priceProduct ) { // kiểm tra xem nó có dữ liệu hay không
-						echo 'Giá : ', number_format($priceProduct,0,",","."),' Đ/hộp';
-					}
-				?>
-			</div>
-			<a class="more-show" href="<?php echo get_permalink() ;?>" title="Xem chi tiết">Chi tiết >></a>
+			<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 		</div>
 	</div>
 	
-</li><!-- #post-## -->
+</article><!-- #post-## -->

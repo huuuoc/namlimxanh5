@@ -9,28 +9,28 @@
 					<div class="block-support">
 						<h2 class="title-block"><span>Tư vấn về nấm lim xanh</span> - hãy liên hệ ngay với chúng tôi</h2>
 						<ul>
-							<li><a href="telto:04.3797.0138">
+							<li><a href="tel:04.3797.0138">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/support1.png" alt="support"/>
 								<div class="name-phone">
 									<span class="name">Tổng đài tư vấn</span><br/>
 									<span class="phone">04.3797.0138</span>
 								</div>
 							</a></li>
-							<li><a href="telto:0936.476.588">
+							<li><a href="tel:0936.476.588">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/support2.png" alt="support"/>
 								<div class="name-phone">
 									<span class="name">Dược sỹ Dung</span><br/>
 									<span class="phone">0936.476.588</span>
 								</div>
 							</a></li>
-							<li><a href="telto:0919.257.838">
+							<li><a href="tel:0919.257.838">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/support3.png" alt="support"/>
 								<div class="name-phone">
 									<span class="name">Dược sỹ Hoa</span><br/>
 									<span class="phone">0919.257.838</span>
 								</div>
 							</a></li>
-							<li class="last"><a href="telto:04.85878602">
+							<li class="last"><a href="tel:04.85878602">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/support4.png" alt="support"/>
 								<div class="name-phone">
 									<span class="name">Hỗ trợ hậu mãi</span><br/>
@@ -41,13 +41,13 @@
 					</div>
 					<div class="block-angency">
 						<ul class="tab-link">
-							<li class="active" item="#tab1"  tab-link="tab-link" tab-content="tab-content"><span>Đại lý Miền Bắc</span></li>
-							<li item="#tab2" tab-link="tab-link" tab-content="tab-content"><span>Đại lý Miền Trung</span></li>
-							<li item="#tab3"  tab-link="tab-link" tab-content="tab-content"><span>Đại lý Miền Nam</span></li>
+							<li class="active" item="tab4"  tab-link="tab-link" tab-content="tab-content"><span>Đại lý Miền Bắc</span></li>
+							<li item="tab5" tab-link="tab-link" tab-content="tab-content"><span>Đại lý Miền Trung</span></li>
+							<li item="tab6"  tab-link="tab-link" tab-content="tab-content"><span>Đại lý Miền Nam</span></li>
 						</ul>
 						<p>Sản phẩm độc quyền của Công ty TNHH Nấm lim xanh Việt Nam chỉ có bán tại các đại lý chính hãng trên toàn quốc!</p>
 						<div class="tab-content">
-							<div class="active" id="tab1">
+							<div class="active" id="tab4">
 								<ul>
 									<li><a href="#"> Hà Nội</a></li>
 									<li><a href="#"> Hà Nam</a></li>
@@ -55,12 +55,12 @@
 									<li><a href="#"> Hà Nam</a></li>
 								</ul>
 							</div>
-							<div id="tab2">
+							<div id="tab5">
 								<ul>
 									<li><a href="#"> Nghệ An</a></li>
 								</ul>
 							</div>
-							<div id="tab3">
+							<div id="tab6">
 								<ul>
 									<li><a href="#"> Hồ Chí Minh</a></li>
 								</ul>

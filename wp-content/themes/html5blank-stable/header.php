@@ -34,14 +34,14 @@
 							<!-- logo -->
 							<div class="logo lfloat">
 								<?php if ( is_front_page() && is_home() ) : ?>
-									<h1>
+									<h1 class="image-logo">
 										<a href="<?php echo home_url(); ?>">
 											<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 											<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img" />
 										</a>
 									</h1>
 								<?php else : ?>
-									<p>
+									<p class="image-logo">
 										<a href="<?php echo home_url(); ?>">
 											<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 											<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">

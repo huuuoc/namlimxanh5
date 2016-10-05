@@ -6,7 +6,7 @@
 		
 		// DOM ready, take it away
 		//Tab home
-		$('.tab-link li').click(function(){
+		$('.tab-link li,.tab-link-block li').click(function(){
 			if (!$(this).hasClass('active')) {
 				var id = $(this).attr('item');
 				var tabLink = $(this).attr('tab-link');
@@ -14,7 +14,8 @@
 				$('.'+tabLink+' li.active').removeClass('active');
 				$('.'+tabContent+' > div.active').removeClass('active');
 				$(this).addClass('active'); 
-				$('.'+tabContent+' '+id).addClass('active'); 
+				$(this).parents('.title-tab').attr('class','title-tab '+id); 
+				$('.'+tabContent+' #'+id).addClass('active'); 
 			}
 		});
 	});

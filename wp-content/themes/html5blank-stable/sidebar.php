@@ -3,20 +3,33 @@
 	<div class="content-sidebar">
 		<?php // get_template_part('searchform'); ?>
 		<div class="block-product">
-			<h2 class="title-block">Sản phẩm nấm lim xanh</h2>
-			<ul>
-				<ul class="list-products">
-					<?php
-						$args_products = array(
-							'category__in' => array(9),
-							'orderby'   => 'meta_value_num',
-							'meta_key'  => 'price_product',
-							'order'   => 'ASC',
-						);
-						$a = CustomQuery($args_products,'listproducts');
-						echo $a;
-					?>
-				</ul>
+			<h2 class="title-block">Sản phẩm nấm lim xanh</h2>			
+			<ul class="list-products">
+				<?php
+					$args_products = array(
+						'category__in' => array(9),
+						'orderby'   => 'meta_value_num',
+						'meta_key'  => 'price_product',
+						'posts_per_page' => 3,
+						'order'   => 'ASC',
+					);
+					$products = CustomQuery($args_products,'listproducts');
+					echo $products;
+				?>
+			</ul>
+		</div>
+		<div class="block-video">
+			<h2 class="title-block">Video tư vấn</h2>			
+			<ul class="list-video">
+				<?php
+					$args_video = array(
+						'category__in' => array(8),
+						'posts_per_page' => 5,
+						'order'   => 'DESC'
+					);
+					$video = CustomQuery($args_video,'title');
+					echo $video;
+				?>
 			</ul>
 		</div>
 		<div class="sidebar-widget">

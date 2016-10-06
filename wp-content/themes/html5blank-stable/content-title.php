@@ -23,7 +23,9 @@
 		</div>
 		<!-- /post thumbnail -->
 		<?php
-			the_title( '<h2 class="title-article"><a title="'.get_the_title().'" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			$postTitle = get_the_title();
+			cutString($postTitle,80);
 		?>
+		<h2 class="title-article"><a title="<?php echo get_the_title(); ?>" href="<?php echo esc_url( get_permalink() ); ?> " rel="bookmark"><?php echo $postTitle; ?></a></h2>
 	</div>
 </article><!-- #post-## -->

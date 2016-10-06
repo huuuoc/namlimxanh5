@@ -76,6 +76,7 @@ input:focus {
 }
 
 /*------------------------------------*\
+
     STRUCTURE
 \*------------------------------------*/
 .lfloat{
@@ -94,6 +95,7 @@ input:focus {
 	margin:0 auto;
 	position:relative;
 }
+
 /*--------------- header---------------------------- */
 .header {
 	line-height: 100px;
@@ -174,9 +176,10 @@ input.search-input:focus {
 	padding: 0;
 	list-style: none;
 }
-.nav li{
+.nav > ul > li {
 	float: left;
 	background: url(img/bg-menu.png) no-repeat center right;
+	position: relative;
 }
 .nav > ul > li > a{
 	line-height: 36px;
@@ -193,6 +196,36 @@ input.search-input:focus {
 .nav > ul > li > a:hover{
 	background: #f58220; 
 }
+.sub-menu{
+	position: absolute;
+	left: -999999px;
+	z-index: 9999;
+	background: #f2f2f2;
+	width: 227px;
+}
+.nav > ul > li:hover  ul.sub-menu{
+	left: 0;
+}
+.sub-menu li{
+	padding:  0 5px;
+}
+.sub-menu a{
+	display: block;
+	padding: 7px 0;
+	border-bottom: 1px solid #fefefe;
+}
+.sub-menu li:last-child{
+	border: 0;
+}
+/*--------------- breadcrumbs---------------------------- */
+#breadcrumbs{
+	line-height: 36px;
+	font-size: 13px ;
+	background: url(img/bg-breadcrumbs.png) repeat-x center center / cover;
+	margin-bottom: 10px;
+	padding: 0 0 0 5px;
+}
+
 /*------------------- main-content ----------------------------*/
 .main-container{
 	float: left;
@@ -249,12 +282,12 @@ input.search-input:focus {
 	bottom: 0;
 	left: 10px;
 	z-index: 9999;
-	width: 100%;
 	background: url(img/bg-cong-dung.png) repeat center center;
 	margin: 0;
 	font: 300 23.19px/24px "Arial";
-	padding: 16px 0 16px 10px;
+	padding: 16px 10px 16px 10px;
 	border-left: 4px solid #39b54a;
+	text-align: justify;
 	
 }
 .block-congdung  article:first-child .title-article a{
@@ -290,6 +323,9 @@ input.search-input:focus {
 	padding: 5px 10px;
 	margin: 0;
 	border-bottom: 1px solid #ddd;
+}
+.block-cachdung article:last-child h2{
+	border: 0;
 }
 .bock-tab .content > div{
 	display: none;
@@ -409,6 +445,118 @@ input.search-input:focus {
 	margin: 0;
 	text-align: justify;
 }
+section .post-thumbnail{
+	width: 248px;
+	float: left;
+}
+section .post-thumbnail img{
+	width: 100%;
+	height: 147px;
+	border: 1px solid #e2e2e3;
+	padding: 4px;
+}
+section article{
+	float: left;
+	width: 100%;
+	margin: 0 0 10px;
+	border-bottom: 1px solid #e2e2e3;
+	padding: 0 0 10px;
+}
+main{
+	background: #fff;
+	padding:10px 10px 0;
+	margin-right: 10px;
+	overflow: hidden;
+}
+section .post-title,section .short-description {
+	overflow: hidden;
+	margin: 0;
+	text-align: justify;
+	padding-left: 10px;
+	font-size: 14px;
+}
+section .post-title{
+	padding-bottom: 5px;
+}
+.single article{
+	text-align: justify;
+	font-size: 14px;
+	border: 0!important;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.single article h1{
+	font-size: 18px;
+	margin: 0;
+	color: #39b54a;
+	font-weight: bold;
+}
+.tag a{
+	color:#39b54a;
+}
+.tag a:hover{
+	color:#ea721e;
+}
+.entry-title{
+	font-size: 14px;
+}
+.meta-price{
+	display: none;
+}
+.post-ratings{
+	font-size: 14px;
+}
+.title-rating{
+	font-weight: bold;
+}
+.view-detail{
+	margin: 0;
+	text-align: right;
+}
+section .short-description p{ 
+	margin: 0;
+}
+.pagination{
+	float: left;
+	width: 100%;
+	text-align: right;
+	margin-bottom: 10px;
+}
+.page-numbers{
+	font-size: 14px;
+	padding: 2px 6px;
+	background: #e1e1e1;
+	margin-right: 2px;
+}
+.current.page-numbers{
+	background: #39b54a;
+}
+/*Simple*/
+.related-posts{
+	width: 100%;
+	float: left;
+	border-top: 1px solid #bbb;
+	padding: 10px 0 0;
+	margin: 10px 0 0;
+}
+.related-posts article{
+	float: left;
+	width: 25%;
+	padding-right: 10px;
+}
+.related-posts article .post-thumbnail img{
+	width: 100%;
+	height: 107px;
+}
+.related-posts article .title-post{
+	font-size: 12.72px;
+	margin: 0;
+	text-align: justify;
+	padding: 5px 0;
+}
+ .single  .breadcrumb_last{
+	 display: none;
+ }
 /*------------------- sidebar ----------------------------*/
 
 .sidebar {
@@ -439,6 +587,10 @@ input.search-input:focus {
 	text-transform: uppercase;
 	background: #39b54a;
 	color:#fff;
+}
+.block-video .title-block,
+.block-chung-nhan .title-block{
+	margin-bottom: 10px;
 }
 .list-products li{
 	width: 100%;
@@ -473,7 +625,7 @@ input.search-input:focus {
 .list-products .price-product{
 	color: #d63307;
 }
-.list-products .more-show{
+.more-show{
 	font-size: 14px;
 	line-height: 23px;
 	background: #39b54a;

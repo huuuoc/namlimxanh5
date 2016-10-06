@@ -49,20 +49,35 @@
 						<div class="tab-content">
 							<div class="active" id="tab4">
 								<ul>
-									<li><a href="#"> Hà Nội</a></li>
-									<li><a href="#"> Hà Nam</a></li>
-									<li><a href="#"> Hà Nội</a></li>
-									<li><a href="#"> Hà Nam</a></li>
+									<?php
+										$args_angency1 = array(
+											'category__in' => array(2),
+											'order'   => 'ASC'
+										);
+										echo CustomQuery($args_angency1,'list-angency');
+									?>
 								</ul>
 							</div>
 							<div id="tab5">
 								<ul>
-									<li><a href="#"> Nghệ An</a></li>
+									<?php
+										$args_angency2 = array(
+											'category__in' => array(3),
+											'order'   => 'ASC'
+										);
+										echo CustomQuery($args_angency2,'list-angency');
+									?>
 								</ul>
 							</div>
 							<div id="tab6">
 								<ul>
-									<li><a href="#"> Hồ Chí Minh</a></li>
+									<?php
+										$args_angency3 = array(
+											'category__in' => array(4),
+											'order'   => 'ASC'
+										);
+										echo CustomQuery($args_angency3,'list-angency');
+									?>
 								</ul>
 							</div>
 						</div>

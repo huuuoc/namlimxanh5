@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 
 	<main role="main">
+		<?php
+			if ( !is_front_page() && !is_home() ){
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb('<div id="breadcrumbs">','</div>');
+				}
+			}
+		?>
 		<!-- section -->
 		<section>
 

@@ -32,6 +32,14 @@
 				?>
 			</ul>
 		</div>
+		<?php if ( !is_front_page() && !is_home() ) :?>
+		<div class="block-chung-nhan">
+			<h2 class="title-block">Chứng nhận</h2>			
+			<div class="content">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/chung-nhan.png" alt="chứng nhận"/>
+			</div>
+		</div>
+		<?php endif; ?>
 		<div class="sidebar-widget">
 			<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
 		</div>

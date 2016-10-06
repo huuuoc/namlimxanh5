@@ -21,9 +21,14 @@
 		<!-- /post thumbnail -->
 		
 		<div class="desc-article">
+			
 			<?php
-				the_title( '<h2 class="name-product"><a title="'.get_the_title().'" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				$postTitle1 = get_the_title();
+				cutString($postTitle1,80);
 			?>
+			<h2 class="name-product"><a title="<?php echo get_the_title(); ?>" href="<?php echo esc_url( get_permalink() ); ?> " rel="bookmark"><?php echo $postTitle1; ?></a></h2>
+				
+			
 			<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 		</div>
 	</div>
